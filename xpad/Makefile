@@ -1,11 +1,11 @@
 KERNEL_TREE_PATH?=/lib/modules/$(shell uname -r)/build
 EXTRA_CFLAGS="-DDEBUG"
 
-obj-m+=hello.o
+obj-m+=xpad.o
 
-all: hello.ko
+all: xpad.ko
 
-hello.ko: hello.c
+hello.ko: xpad.c
 	make -C $(KERNEL_TREE_PATH) M=$(PWD) modules
 
 clean:
